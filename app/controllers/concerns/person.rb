@@ -8,21 +8,28 @@ class Person
 
   def nickname
     # YOUR IMPLEMENTATION HERE
-    'nickname'
+    @name[0, 4]
   end
 
   def birth_year
     # YOUR IMPLEMENTATION HERE
-    1990
+    2016 - age.to_i
   end
 
   def introduction
     # YOUR IMPLEMENTATION HERE
-    'introduce'
+    @name + " is " + @age + " years old"
+  end
+
+  def fib(n)
+    raise "fib not defined for negative numbers" if n < 0
+    new, old = 1, 0
+    n.times {new, old = new + old, new}
+    old
   end
 
   def fib_number
     # YOUR IMPLMENTATION HERE
-    0
+    fib age.to_i
   end
 end

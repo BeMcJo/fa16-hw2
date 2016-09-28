@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def stringify
-    stringify_instance = Stringify.new(
+    stringify_instance = Stringify.new( 
       params[:name],
       params[:adjective]
     )
@@ -18,4 +18,8 @@ class PagesController < ApplicationController
   def person
     @person = Person.new params[:name], params[:age]
   end
+
+  def me
+  end
+
 end
